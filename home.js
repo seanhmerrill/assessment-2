@@ -164,3 +164,10 @@ console.log(newDeal)
 */
 
 //CODE HERE
+
+let {desc} = deals[1]
+
+const whiteSpace = desc.trim()
+const newDesc = whiteSpace.replace('March', 'April')
+
+console.log(newDesc)
