@@ -108,7 +108,48 @@ console.log(category)
 
 //CODE HERE
 
-
+let foodArr = [
+    {
+        pizzaName: 'Cheese',
+        pizzaPrice: 7,
+        pizzaCategory: 'Appetizer',
+        pizzaPopularity: 20,
+        pizzaRating: 15,
+        pizzaTags: ['Cheese', 'Plain', 'Kids', 'Cheesy', 'Mozerella','Tomato Sauce']
+    },
+    {
+        pizzaName: 'Pepperoni',
+        pizzaPrice: 12,
+        pizzaCategory: 'Main Course',
+        pizzaPopularity: 18,
+        pizzaRating: 14,
+        pizzaTags: ['Pepperoni', 'Kids', 'Plain', 'Tomato Sauce']
+    },
+    {
+        pizzaName: '3 Meat',
+        pizzaPrice: 15,
+        pizzaCategory: 'Main Course',
+        pizzaPopularity: 1,
+        pizzaRating: 3,
+        pizzaTags: ['Pepperoni', 'Sausage', 'Bacon', 'Tomato Sauce']
+    },
+    {
+        pizzaName: 'Oreo',
+        pizzaPrice: 10,
+        pizzaCategory: 'Dessert',
+        pizzaPopularity: 4,
+        pizzaRating: 4,
+        pizzaTags: ['Oreo', 'Cream Cheese', 'Dessert', 'Cookie']
+    },
+    {
+        pizzaName: 'Cinnamon Roll',
+        pizzaPrice: 10,
+        pizzaCategory: 'Dessert',
+        pizzaPopularity: 5,
+        pizzaRating: 5,
+        pizzaTags: ['Dessert', 'Cookie', 'Cinnamon', 'Cream Cheese']
+    },
+]
 
 //////////////////PROBLEM 4////////////////////
 /* 
@@ -124,9 +165,17 @@ console.log(category)
 
 //CODE HERE
 
-// const filteredFood = foodArr.filter(/* CALLBACK HERE */)
+const filteredFood = foodArr.filter(inputTag)
 
+function inputTag (tag){
+    for (let i =0; i < foodArr.length; i++){
+        if(pizzaTags[i] === tag){
+            console.log(foodArr.pizzaName)
+        }
+    }
+}
 
+let tag = 'Kids'
 
 //////////////////PROBLEM 5////////////////////
 /* 
