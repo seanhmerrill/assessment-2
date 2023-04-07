@@ -108,7 +108,7 @@ console.log(category)
 
 //CODE HERE
 
-let foodArr = [
+const foodArr = [
     {
         pizzaName: 'Cheese',
         pizzaPrice: 7,
@@ -165,17 +165,30 @@ let foodArr = [
 
 //CODE HERE
 
-const filteredFood = foodArr.filter(inputTag)
+let newTag = 'Kids'
 
-function inputTag (tag){
+function findPizzasWithTag (tag){
     for (let i =0; i < foodArr.length; i++){
-        if(pizzaTags[i] === tag){
-            console.log(foodArr.pizzaName)
+        if (foodArr[i].pizzaTags.includes(tag)){
+            console.log(foodArr[i].pizzaName)
         }
     }
 }
+//     foodArr.forEach((pizza) => {
+//         if (pizza.pizzaTags.includes(tag)){
+//             console.log(pizza.pizzaName)
+//         }
+//     })
 
-let tag = 'Kids'
+// }
+
+// function findPizzaTag(pizza) {
+//     if (pizza.pizzaTags.includes(tag)){
+//         console.log(pizza.pizzaName)
+//     }
+// }
+
+findPizzasWithTag(newTag)
 
 //////////////////PROBLEM 5////////////////////
 /* 
