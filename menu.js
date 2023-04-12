@@ -165,6 +165,7 @@ const foodArr = [
 
 //CODE HERE
 
+/*
 let newTag = 'Kids'
 
 function findPizzasWithTag (tag){
@@ -189,6 +190,7 @@ function findPizzasWithTag (tag){
 // }
 
 findPizzasWithTag(newTag)
+*/
 
 //////////////////PROBLEM 5////////////////////
 /* 
@@ -231,6 +233,42 @@ findPizzasWithTag(newTag)
 
 //CODE HERE
 
+function filterByProperty (property, number, type){
+    let bigPropertyArr = []
+    let smallPropertyArr = []
+
+    let typeAbove = foodArr.filter((broadProperty) => {
+        if (property === 'rating' && broadProperty.pizzaRating < number){
+            return bigPropertyArr.push(broadProperty.pizzaName)
+        }
+        else if (property === 'price' && broadProperty.pizzaPrice > number){
+            return bigPropertyArr.push(broadProperty.pizzaName)
+        }
+        else if (property === 'popularity' && broadProperty.pizzaPopularity < number){
+            return bigPropertyArr.push(broadProperty.pizzaName)
+        }
+    })
+
+    let typeBelow = foodArr.filter((property2) => {
+        if (property === 'rating' && property2.pizzaRating > number){
+            return smallPropertyArr.push(property2.pizzaName)
+        }
+        else if (property === 'price' && property2.pizzaPrice < number){
+            return smallPropertyArr.push(property2.pizzaName)
+        }
+        else if (property === 'popularity' && property2.pizzaPopularity > number){
+            return smallPropertyArr.push(property2.pizzaName)
+        }
+    })
+
+    if (type === 'above'){
+        console.log(bigPropertyArr)
+    }
+    else if (type === 'below'){
+        console.log(smallPropertyArr)
+    }
+
+}
 
 /*
     Invoke the `filterByProperty` function passing
@@ -240,3 +278,7 @@ findPizzasWithTag(newTag)
 */
 
 //CODE HERE
+
+filterByProperty('rating', 10, 'above')
+filterByProperty('price', 12, 'below')
+filterByProperty('popularity', 21, 'above')
