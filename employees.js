@@ -27,8 +27,7 @@ class Employee {
         this.shifts = shifts;
     }
 
-    getSchedule(schedule){
-        this.schedule = schedule;
+    getSchedule = () => {
         console.log(this.name, 'works on', this.shifts)
     }
 }
@@ -47,7 +46,6 @@ class Employee {
 
 let empOne = new Employee('Jess','Weekday mornings, Weekday afternoons')
 
-
 /*
     Call the `getSchedule` method on the
     `empOne` object.
@@ -55,8 +53,7 @@ let empOne = new Employee('Jess','Weekday mornings, Weekday afternoons')
 
 //CODE HERE
 
-getSchedule(empOne)
-
+empOne.getSchedule()
 
 /*
     Make a copy of the empOne object
@@ -72,6 +69,11 @@ getSchedule(empOne)
 
 //CODE HERE
 
+//FIX THIS CODE. I DON'T KNOW WHY IT WON'T COPY THE SHIFT FROM empOne
+
+let empTwo = new Employee('Tim',...String(empOne))
+//empTwo.name = 'Tim'
+empTwo.getSchedule()
 
 
 //////////////////PROBLEM 2////////////////////
