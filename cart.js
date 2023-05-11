@@ -88,6 +88,11 @@ function calcFinalPrice (cartTotal, couponValue, tax){
 /*
     TEXT ANSWER HERE
 
+    NUMBER OF ITEMS IN THE ORDER - This is a very important piece of information the restaurant needs to make the customer happy
+    PRICE OF THE ORDER - This piece of information could be pretty useful to make sure the customer is paying the appropriate price
+    REWARDS MEMBER - Could help keep track of any food items the restaurant owes the customer for free
+    CUSTOMER BIRTHDAY - For any desserts the restaurant might provide for free for the customer's birthday
+
 */
 
 /*
@@ -96,3 +101,10 @@ function calcFinalPrice (cartTotal, couponValue, tax){
 */
 
 //CODE HERE
+
+let customerInfo = {
+    birthday: "January 1",
+    rewardsMember: false,
+    orderItmes: 0,
+    orderPrice: 0,
+}
