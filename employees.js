@@ -69,12 +69,9 @@ empOne.getSchedule()
 
 //CODE HERE
 
-//FIX THIS CODE. I DON'T KNOW WHY IT WON'T COPY THE SHIFT FROM empOne
+let empTwo = {...empOne}
 
-let empTwo = new Employee('Tim',...String(empOne))
-//empTwo.name = 'Tim'
-empTwo.getSchedule()
-
+empTwo['name'] = 'Nick'
 
 //////////////////PROBLEM 2////////////////////
 /*  
@@ -101,7 +98,20 @@ empTwo.getSchedule()
 
 //CODE HERE
 
+class Manager extends Employee {
+    constructor(name, shifts, employees) {
+        super(name, shifts)
+        this.employees = [employees]
+    }
 
+    getEmployees = () => {
+        console.log(`${this.name} manages ${this.employees}`)
+    }
+
+    addEmployee = (emp) => {
+        this.employees.push(emp)
+    }
+}
 
 /*
     Create a new instance of your class.
@@ -116,6 +126,7 @@ empTwo.getSchedule()
 
 //CODE HERE
 
+let manager = new Manager('Winston', 'weekday mornings, weekday afternoons', 'Cece, Schmidt')
 
 /*
     Call the `getEmployees` method on the
@@ -123,6 +134,8 @@ empTwo.getSchedule()
 */
 
 //CODE HERE
+
+manager.getEmployees()
 
 /*
     Call the `addEmployee` method on the 
@@ -132,6 +145,8 @@ empTwo.getSchedule()
 
 //CODE HERE 
 
+manager.addEmployee('Coach')
+
 /*
     Call the `getEmployees` method on the
     `manager` object again to confirm 
@@ -139,3 +154,5 @@ empTwo.getSchedule()
 */
 
 //CODE HERE
+
+manager.getEmployees()
